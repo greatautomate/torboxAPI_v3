@@ -1,0 +1,110 @@
+# render.yaml — TorBox Gateway Blueprint
+# Docs: https://render.com/docs/blueprint-spec
+# One stateless web service (API + admin dashboard + homepage) and one cron service for background jobs.
+# All persistent state lives in MongoDB Atlas (MONGODB_URI) so restarts/redeploys never lose data.
+previews:
+  generation: manual
+
+envVarGroups:
+  - name: torbox-gateway-shared
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      - key: MONGODB_DB_NAME
+        value: torbox_gateway
+      - key: TORBOX_API_BASE
+        value: https://api.torbox.app
+      - key: UPSTREAM_GLOBAL_PER_MINUTE
+        value: "280"
+      - key: UPSTREAM_GLOBAL_CREATE_UNCACHED_PER_HOUR
+        value: "55"
+      - key: UPSTREAM_GLOBAL_CREATE_USENET_PER_HOUR
+        value: "55"
+      - key: UPSTREAM_GLOBAL_CREATE_WEBDL_PER_HOUR
+        value: "55"
+      - key: LOG_RETENTION_DAYS
+        value: "30"
+      - key: MAX_UPLOAD_MB
+        value: "100"
+      - key: TRUST_PROXY
+        value: "true"
+
+services:
+  # ───────────── Web service: API + admin SPA + homepage ─────────────
+  - type: web
+    name: torbox-gateway
+    runtime: node
+    plan: standard                        # 1 CPU / 2 GB. Use "starter" for staging. (New IDs: 1c-2g / 0.5c-512mb)
+    region: virginia
+    branch: main
+    autoDeployTrigger: checksPass
+    buildCommand: npm ci --include=dev && npm run build   # --include=dev: with NODE_ENV=production, npm ci would skip devDependencies (vite/tsc)
+    startCommand: npm start
+    preDeployCommand: npm run migrate     # creates indexes / TTLs (idempotent)
+    healthCheckPath: /healthz
+    numInstances: 1                       # safe to raise: rate limits, cache and sessions are all in MongoDB
+    maxShutdownDelaySeconds: 60           # let in-flight uploads (≤100 MB) finish
+    envVars:
+      - fromGroup: torbox-gateway-shared
+      # ---- secrets: paste the SAME values into both services (env groups cannot hold sync:false entries) ----
+      - key: MONGODB_URI                 # mongodb+srv://user:pass@cluster.mongodb.net/?retryWrites=true&w=majority
+        sync: false
+      - key: MASTER_ENCRYPTION_KEY       # openssl rand -base64 32  (encrypts TorBox keys, TOTP secrets, webhook secrets)
+        sync: false
+      - key: PERMALINK_SIGNING_SECRET    # openssl rand -hex 32
+        sync: false
+      - key: WEBHOOK_INBOUND_SECRET      # openssl rand -hex 16
+        sync: false
+      - key: PORT
+        value: "10000"
+      - key: RUN_JOBS_IN_PROCESS
+        value: "true"                     # web instances also run the lease-locked scheduler; the cron below is a safety net
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: TORBOX_API_KEY               # bootstrap only: migrated into the encrypted store on first boot; remove afterwards
+        sync: false
+      - key: ADMIN_BOOTSTRAP_EMAIL
+        sync: false
+      - key: ADMIN_BOOTSTRAP_PASSWORD
+        sync: false
+      - key: PUBLIC_BASE_URL              # set to your custom domain once DNS is live (e.g. https://api.example.com)
+        fromService:
+          name: torbox-gateway
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL
+    # domains:
+    #   - api.example.com
+
+  # ───────────── Cron: background jobs (rollups, reconciliation, webhooks, alerts, pruning) ─────────────
+  - type: cron
+    name: torbox-gateway-jobs
+    runtime: node
+    plan: starter
+    region: virginia
+    branch: main
+    schedule: "*/2 * * * *"
+    autoDeployTrigger: checksPass
+    buildCommand: npm ci --include=dev && npm run build -w apps/api
+    startCommand: npm run jobs
+    envVars:
+      - fromGroup: torbox-gateway-shared
+      # ---- secrets: paste the SAME values into both services (env groups cannot hold sync:false entries) ----
+      - key: MONGODB_URI                 # mongodb+srv://user:pass@cluster.mongodb.net/?retryWrites=true&w=majority
+        sync: false
+      - key: MASTER_ENCRYPTION_KEY       # openssl rand -base64 32  (encrypts TorBox keys, TOTP secrets, webhook secrets)
+        sync: false
+      - key: PERMALINK_SIGNING_SECRET    # openssl rand -hex 32
+        sync: false
+      - key: WEBHOOK_INBOUND_SECRET      # openssl rand -hex 16
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true               # unused by jobs but required by config validation
+      - key: PUBLIC_BASE_URL
+        fromService:
+          name: torbox-gateway
+          type: web
+          envVarKey: RENDER_EXTERNAL_URL

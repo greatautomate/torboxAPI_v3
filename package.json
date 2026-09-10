@@ -1,0 +1,27 @@
+{
+  "name": "torbox-gateway",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Multi-tenant API gateway, key management and admin dashboard on top of the TorBox API",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "npm run build -w apps/web && npm run build -w apps/api",
+    "start": "node apps/api/dist/server.js",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "dev:mock": "concurrently -n mock,api,web -c magenta,blue,green \"npm run mock -w apps/api\" \"npm run dev -w apps/api\" \"npm run dev -w apps/web\"",
+    "test": "npm test -w apps/api",
+    "typecheck": "npm run typecheck -w apps/api && npm run typecheck -w apps/web",
+    "migrate": "node apps/api/dist/migrate.js",
+    "jobs": "node apps/api/dist/jobs/run.js --due",
+    "dev:mongo": "node scripts/dev-mongo.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

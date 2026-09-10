@@ -1,0 +1,1345 @@
+{
+ "POST /v1/api/torrents/createtorrent": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent Added Successfully",
+  "data": {
+   "hash": "string",
+   "torrent_id": 0,
+   "auth_id": "string"
+  }
+ },
+ "POST /v1/api/torrents/asynccreatetorrent": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent creation request has been queued. You will receive a notification when it is processed.",
+  "data": null
+ },
+ "POST /v1/api/torrents/controltorrent": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent operationd successfully.",
+  "data": null
+ },
+ "GET /v1/api/torrents/requestdl": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent download requested successfully.",
+  "data": "https://example.com/download.zip"
+ },
+ "GET /v1/api/torrents/mylist": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent list retrieved successfully.",
+  "data": [
+   {
+    "id": 0,
+    "auth_id": "string",
+    "server": 0,
+    "hash": "string",
+    "name": "string",
+    "magnet": "string",
+    "size": 0,
+    "active": false,
+    "created_at": "2026-03-08T21:21:28Z",
+    "updated_at": "2026-03-08T21:21:41Z",
+    "download_state": "string",
+    "seeds": 0,
+    "peers": 0,
+    "ratio": 0,
+    "progress": 0,
+    "download_speed": 0,
+    "upload_speed": 0,
+    "eta": 0,
+    "torrent_file": true,
+    "expires_at": "2026-04-07T21:21:41Z",
+    "download_present": true,
+    "files": [
+     {
+      "id": 0,
+      "md5": "string",
+      "hash": "string",
+      "name": "string",
+      "size": 0,
+      "zipped": false,
+      "s3_path": "string",
+      "infected": false,
+      "mimetype": "string",
+      "short_name": "string",
+      "absolute_path": "string",
+      "opensubtitles_hash": "string"
+     }
+    ],
+    "download_path": "string",
+    "availability": 0,
+    "download_finished": true,
+    "tracker": "string",
+    "total_uploaded": 0,
+    "total_downloaded": 0,
+    "cached": true,
+    "owner": "string",
+    "seed_torrent": false,
+    "allow_zipped": true,
+    "long_term_seeding": false,
+    "tracker_message": "string",
+    "cached_at": "2026-04-07T21:21:41Z",
+    "private": false,
+    "alternative_hashes": [
+     "string",
+     "string"
+    ],
+    "tags": [
+     "string",
+     "string"
+    ],
+    "airlocked": false
+   }
+  ]
+ },
+ "GET /v1/api/torrents/checkcached": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent cache status retrieved successfully.",
+  "data": {
+   "string": {
+    "name": "string",
+    "size": 0,
+    "hash": "string",
+    "files": [
+     {
+      "id": 0,
+      "name": "string",
+      "size": 0,
+      "opensubtitles_hash": "string",
+      "short_name": "string",
+      "mimetype": "string"
+     }
+    ]
+   }
+  }
+ },
+ "POST /v1/api/torrents/checkcached": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent cache status retrieved successfully.",
+  "data": {
+   "string": {
+    "name": "string",
+    "size": 0,
+    "hash": "string",
+    "files": [
+     {
+      "id": 0,
+      "name": "string",
+      "size": 0,
+      "opensubtitles_hash": "string",
+      "short_name": "string",
+      "mimetype": "string"
+     }
+    ]
+   }
+  }
+ },
+ "GET /v1/api/torrents/exportdata": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent data exported successfully.",
+  "data": "string"
+ },
+ "GET /v1/api/torrents/torrentinfo": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved torrent metadata for the hash.",
+  "data": {
+   "name": "string",
+   "hash": "string",
+   "size": 0,
+   "trackers": [
+    "string",
+    "string"
+   ],
+   "seeds": 0,
+   "peers": 0,
+   "files": [
+    {
+     "name": "string",
+     "size": 0
+    }
+   ]
+  }
+ },
+ "POST /v1/api/torrents/torrentinfo": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved torrent metadata for the hash.",
+  "data": {
+   "name": "string",
+   "hash": "string",
+   "size": 0,
+   "trackers": [
+    "string",
+    "string"
+   ],
+   "seeds": 0,
+   "peers": 0,
+   "files": [
+    {
+     "name": "string",
+     "size": 0
+    }
+   ]
+  }
+ },
+ "PUT /v1/api/torrents/edittorrent": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent edited successfully.",
+  "data": null
+ },
+ "POST /v1/api/usenet/createusenetdownload": {
+  "success": true,
+  "error": null,
+  "detail": "Download started successfully.",
+  "data": {
+   "hash": "string",
+   "usenetdownload_id": 0,
+   "auth_id": "string"
+  }
+ },
+ "POST /v1/api/usenet/controlusenetdownload": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet download deleted successfully.",
+  "data": null
+ },
+ "GET /v1/api/usenet/requestdl": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet download requested successfully.",
+  "data": "https://tb-cdn.xx/dld/XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX?token=XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+ },
+ "GET /v1/api/usenet/mylist": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet downloads list retrieved successfully.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2026-02-13T21:53:15Z",
+    "updated_at": "2026-02-13T21:53:34Z",
+    "auth_id": "string",
+    "name": "string",
+    "hash": "string",
+    "download_state": "string",
+    "download_speed": 0,
+    "original_url": "string",
+    "eta": 0,
+    "progress": 0,
+    "size": 0,
+    "download_id": "string",
+    "files": [
+     {
+      "id": 0,
+      "md5": "string",
+      "hash": "string",
+      "name": "string",
+      "size": 0,
+      "zipped": false,
+      "s3_path": "string",
+      "infected": false,
+      "mimetype": "string",
+      "short_name": "string",
+      "absolute_path": "string",
+      "opensubtitles_hash": "string"
+     }
+    ],
+    "active": false,
+    "cached": true,
+    "download_present": true,
+    "download_finished": true,
+    "expires_at": "2026-03-15T21:53:34Z",
+    "server": 0,
+    "cached_at": "2026-02-13T21:53:34Z",
+    "alternative_hashes": [
+     "string",
+     "string"
+    ],
+    "tags": [
+     "string",
+     "string"
+    ],
+    "airlocked": false
+   }
+  ]
+ },
+ "GET /v1/api/usenet/checkcached": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet cache status retrieved successfully.",
+  "data": {
+   "string": {
+    "name": "string",
+    "size": 0,
+    "hash": "string"
+   }
+  }
+ },
+ "POST /v1/api/usenet/checkcached": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent cache status retrieved successfully.",
+  "data": [
+   {
+    "name": "XXXXXXXXXXXXXX",
+    "size": 0,
+    "hash": "XXXXXXXXXXXXXXXXXX",
+    "files": [
+     {
+      "name": "XXXXXXXXXXXXXXXXXX",
+      "size": 0
+     }
+    ]
+   },
+   {
+    "name": "XXXXXXXXXXXXXX",
+    "size": 0,
+    "hash": "XXXXXXXXXXXXXXXXXX",
+    "files": [
+     {
+      "name": "XXXXXXXXXXXXXXXXXX",
+      "size": 0
+     }
+    ]
+   }
+  ]
+ },
+ "PUT /v1/api/usenet/editusenetdownload": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent edited successfully.",
+  "data": null
+ },
+ "GET /v1/api/usenet/provider/connection": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet provider connection info retrieved successfully.",
+  "data": {
+   "host": "nntp.torbox.app",
+   "port": 563,
+   "ssl": true,
+   "username": "Username assigned to you",
+   "password": "Password assigned to you",
+   "connections": 10,
+   "retention": 5000,
+   "limitations": "No more than 10 connections. No sharing of account. Fair share policy applies. This account is for personal use only. Compatible with all Usenet clients. Will expire when your subscription ends."
+  }
+ },
+ "GET /v1/api/usenet/provider/account": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet Server account created successfully.",
+  "data": {
+   "host": "nntp.torbox.app",
+   "port": 563,
+   "ssl": true,
+   "connections": 10,
+   "username": "string",
+   "password": "string"
+  }
+ },
+ "POST /v1/api/usenet/provider/account/resetpw": {
+  "success": true,
+  "error": null,
+  "detail": "Usenet Server password reset successfully.",
+  "data": {
+   "host": "nntp.torbox.app",
+   "port": 563,
+   "ssl": true,
+   "connections": 10,
+   "username": "string",
+   "password": "string"
+  }
+ },
+ "POST /v1/api/webdl/createwebdownload": {
+  "success": true,
+  "error": null,
+  "detail": "XXX download started. Please wait for the download to complete. You will be notified when the download is complete.",
+  "data": {
+   "hash": "string",
+   "webdownload_id": 0,
+   "auth_id": "string",
+   "jdownloader_id": null,
+   "link_list": [
+    "string",
+    "string"
+   ]
+  }
+ },
+ "POST /v1/api/webdl/controlwebdownload": {
+  "success": true,
+  "error": null,
+  "detail": "All web downloads are queued to be operationed.",
+  "data": null
+ },
+ "GET /v1/api/webdl/requestdl": {
+  "success": true,
+  "error": null,
+  "detail": "Web download requested successfully.",
+  "data": "string"
+ },
+ "GET /v1/api/webdl/mylist": {
+  "success": true,
+  "error": null,
+  "detail": "web downloads list retrieved successfully.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2026-03-08T03:45:15Z",
+    "updated_at": "2026-03-08T03:45:15Z",
+    "auth_id": "string",
+    "name": "string",
+    "hash": "string",
+    "download_state": "string",
+    "download_speed": 0,
+    "original_url": "string",
+    "eta": 0,
+    "progress": 0,
+    "size": 0,
+    "download_id": "string",
+    "files": [
+     {
+      "id": 0,
+      "md5": "string",
+      "hash": "string",
+      "name": "string",
+      "size": 0,
+      "zipped": false,
+      "s3_path": "string",
+      "infected": false,
+      "mimetype": "string",
+      "short_name": "string",
+      "absolute_path": "string",
+      "opensubtitles_hash": "string"
+     }
+    ],
+    "active": false,
+    "cached": true,
+    "download_present": true,
+    "download_finished": true,
+    "expires_at": "2026-03-05T02:28:26Z",
+    "error": "string",
+    "cached_at": "2026-03-05T02:28:26Z",
+    "server": 0,
+    "alternative_hashes": [
+     "string",
+     "string"
+    ],
+    "tags": [
+     "string",
+     "string"
+    ],
+    "airlocked": false
+   }
+  ]
+ },
+ "GET /v1/api/webdl/checkcached": {
+  "success": true,
+  "error": null,
+  "detail": "Web download cache status retrieved successfully.",
+  "data": {
+   "string": {
+    "name": "string",
+    "size": 0,
+    "hash": "string"
+   }
+  }
+ },
+ "POST /v1/api/webdl/checkcached": {
+  "success": true,
+  "error": null,
+  "detail": "Web download cache status retrieved successfully.",
+  "data": {
+   "string": {
+    "name": "string",
+    "size": 0,
+    "hash": "string"
+   }
+  }
+ },
+ "GET /v1/api/webdl/hosters": {
+  "success": true,
+  "error": null,
+  "detail": "Hosters list and information retrieved successfully.",
+  "data": [
+   {
+    "id": 1,
+    "name": "Rapidgator",
+    "domains": [
+     "rapidgator.net",
+     "rg.to"
+    ],
+    "url": "https://rapidgator.net",
+    "icon": "https://torbox.app/images/hoster-icons/rapidgator.png",
+    "status": false,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 5,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 536870912000,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 107374182400,
+    "regex": "^https?://(?:[^./]+\\.)*(rapidgator\\.net|rg\\.to)(/|$)"
+   },
+   {
+    "id": 2,
+    "name": "1Fichier",
+    "domains": [
+     "1fichier.com"
+    ],
+    "url": "https://1fichier.com",
+    "icon": "https://torbox.app/images/hoster-icons/1fichier.png",
+    "status": true,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 100,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 21474836480000,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 214748364800,
+    "regex": "^https?://(?:[^./]+\\.)*(1fichier\\.com)(/|$)"
+   },
+   {
+    "id": 3,
+    "name": "ClicknUpload",
+    "domains": [
+     "clicknupload.click",
+     "clicknupload.com",
+     "clicknupload.org",
+     "clicknupload.cc",
+     "clicknupload.me",
+     "clicknupload.link",
+     "clicknupload.club",
+     "clicknupload.red",
+     "clickndownload.cfd",
+     "clicknupload.to",
+     "clicknupload.co",
+     "clicknupload.me",
+     "clicknupload.online",
+     "clicknupload.download",
+     "clicknupload.vip",
+     "clicknupload.site",
+     "clicknupload.xyz",
+     "clicknupload.one",
+     "clicknupload.name",
+     "clicknupload.space"
+    ],
+    "url": "https://clicknupload.click",
+    "icon": "https://torbox.app/images/hoster-icons/clicknupload.png",
+    "status": true,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 100,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 10737418240000,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 107374182400,
+    "regex": "^https?://(?:[^./]+\\.)*(clicknupload\\.click|clicknupload\\.com|clicknupload\\.org|clicknupload\\.cc|clicknupload\\.me|clicknupload\\.link|clicknupload\\.club|clicknupload\\.red|clickndownload\\.cfd|clicknupload\\.to|clicknupload\\.co|clicknupload\\.me|clicknupload\\.online|clicknupload\\.download|clicknupload\\.vip|clicknupload\\.site|clicknupload\\.xyz|clicknupload\\.one|clicknupload\\.name|clicknupload\\.space)(/|$)"
+   },
+   {
+    "id": 4,
+    "name": "DDownload",
+    "domains": [
+     "ddownload.com",
+     "ddl.to"
+    ],
+    "url": "https://ddownload.com",
+    "icon": "https://torbox.app/images/hoster-icons/ddownload.png",
+    "status": false,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 10,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 1073741824000,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 107374182400,
+    "regex": "^https?://(?:[^./]+\\.)*(ddownload\\.com|ddl\\.to)(/|$)"
+   },
+   {
+    "id": 5,
+    "name": "Filer",
+    "domains": [
+     "filer.net"
+    ],
+    "url": "https://filer.net",
+    "icon": "https://torbox.app/images/hoster-icons/filer.png",
+    "status": true,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 5,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 53687091200,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 107374182400,
+    "regex": "^https?://(?:[^./]+\\.)*(filer\\.net)(/|$)"
+   },
+   {
+    "id": 6,
+    "name": "4Shared",
+    "domains": [
+     "4shared.com",
+     "4s.io",
+     "4shared-china.com"
+    ],
+    "url": "https://4shared.com",
+    "icon": "https://torbox.app/images/hoster-icons/4shared.png",
+    "status": true,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 5,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 53687091200,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 107374182400,
+    "regex": "^https?://(?:[^./]+\\.)*(4shared\\.com|4s\\.io|4shared\\-china\\.com)(/|$)"
+   },
+   {
+    "id": 7,
+    "name": "Hitfile",
+    "domains": [
+     "hitfile.net",
+     "hitf.cc",
+     "htfl.net"
+    ],
+    "url": "https://hitfile.net",
+    "icon": "https://torbox.app/images/hoster-icons/hitfile.png",
+    "status": true,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 10,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 1073741824000,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 107374182400,
+    "regex": "^https?://(?:[^./]+\\.)*(hitfile\\.net|hitf\\.cc|htfl\\.net)(/|$)"
+   },
+   {
+    "id": 8,
+    "name": "Mediafire",
+    "domains": [
+     "mediafire.com"
+    ],
+    "url": "https://mediafire.com",
+    "icon": "https://torbox.app/images/hoster-icons/mediafire.png",
+    "status": true,
+    "type": "hoster",
+    "note": null,
+    "nsfw": false,
+    "daily_link_limit": 100,
+    "daily_link_used": 0,
+    "daily_bandwidth_limit": 21474836480000,
+    "daily_bandwidth_used": 0,
+    "per_link_size_limit": 214748364800,
+    "regex": "^https?://(?:[^./]+\\.)*(mediafire\\.com)(/|$)"
+   }
+  ]
+ },
+ "PUT /v1/api/webdl/editwebdownload": {
+  "success": true,
+  "error": null,
+  "detail": "Torrent edited successfully.",
+  "data": null
+ },
+ "GET /": {
+  "success": true,
+  "error": null,
+  "detail": "API is up and running.",
+  "data": null
+ },
+ "GET /v1/api/stats": {
+  "success": true,
+  "error": false,
+  "data": {
+   "total_users": 0,
+   "total_servers": 0
+  },
+  "detail": "Stats retrieved successfully."
+ },
+ "GET /v1/api/changelogs/json": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved changelogs.",
+  "data": [
+   {
+    "name": "v7.1.3",
+    "html": "<h2>API</h2><ul><li><p>Allows sending authentication to the Web hosters listing endpoint for live data and accurate representation of usage over daily use. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-0a17f8b0-87a1-459c-b2d9-32d34b00c2ae?action=share&amp;source=copy-link&amp;creator=29572726&amp;ctx=documentation\">API DOCS</a>.</p></li><li><p>Allows redirecting download links using ?redirect=true. This is good for a lot of automations which created download links and refreshed them to keep them alive, which is considered abuse. Instead you can now give a permanent URL such as: <code>https://api.torbox.app/v1/api/torrents/requestdl?token=APIKEY&amp;torrent_id=NUMBER&amp;file_id=NUMBER&amp;redirect=true</code> . <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/torbox/request/lrz8fwd/request-download-link?tab=overview\">API DOCS</a>.</p></li></ul><h2>Web Downloads/Debrid</h2><ul><li><p>Adds <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://send.now\">Send</a> hoster. This is a modern file hoster which is very popular, which TorBox now supports with high speed downloads, all included in your TorBox paid subscription.</p></li><li><p>Adds <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Pillowcase.su\">Pillowcase.su</a> hoster. This is a popular file hoster which is mainly geared towards open source music.</p></li><li><p>Adds <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.swisstransfer.com/en-us\">SwissTransfer</a> hoster. This is a popular temporary file hoster which can be slow to download from for users in some countries. This can make TorBox an excellent choice for downloading <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.swisstransfer.com/en-us\">SwissTransfer</a> files as they are downloaded extremely fast.</p></li><li><p>Thanks to our partnership with <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Cobalt.tools\">Cobalt.tools</a> you can now download from YouTube reliably, as well as 20+ more sites that they offer!</p><ul><li><p>Currently no download progress is shown on the dashboard, and size will start out at zero, but as it downloads the size will update, being a way you can see that things are moving. They are working on this, and it will be fixed soon.</p></li></ul></li><li><p>Fixes TurboBit downloads.</p></li><li><p>Fixes Bunkrr downloads.</p></li></ul><h2>Service</h2><ul><li><p>In the case where a Usenet download\u2019s name is its hash, while the filename is correct, the name will be renamed to the file name, bar any extensions. This will solve some issues with obfuscation.</p></li></ul><p></p>",
+    "markdown": "## API\n- Allows sending authentication to the Web hosters listing endpoint for live data and accurate representation of usage over daily use. [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-0a17f8b0-87a1-459c-b2d9-32d34b00c2ae?action=share&source=copy-link&creator=29572726&ctx=documentation).\n- Allows redirecting download links using ?redirect=true. This is good for a lot of automations which created download links and refreshed them to keep them alive, which is considered abuse. Instead you can now give a permanent URL such as: `https://api.torbox.app/v1/api/torrents/requestdl?token=APIKEY&amp;torrent_id=NUMBER&amp;file_id=NUMBER&amp;redirect=true` . [API DOCS](https://www.postman.com/wamy-dev/torbox/request/lrz8fwd/request-download-link?tab=overview).\n\n## Web Downloads/Debrid\n- Adds [Send](https://send.now) hoster. This is a modern file hoster which is very popular, which TorBox now supports with high speed downloads, all included in your TorBox paid subscription.\n- Adds [Pillowcase.su](http://Pillowcase.su) hoster. This is a popular file hoster which is mainly geared towards open source music.\n- Adds [SwissTransfer](https://www.swisstransfer.com/en-us) hoster. This is a popular temporary file hoster which can be slow to download from for users in some countries. This can make TorBox an excellent choice for downloading [SwissTransfer](https://www.swisstransfer.com/en-us) files as they are downloaded extremely fast.\n- Thanks to our partnership with [Cobalt.tools](http://Cobalt.tools) you can now download from YouTube reliably, as well as 20+ more sites that they offer!\n    - Currently no download progress is shown on the dashboard, and size will start out at zero, but as it downloads the size will update, being a way you can see that things are moving. They are working on this, and it will be fixed soon.\n    \n- Fixes TurboBit downloads.\n- Fixes Bunkrr downloads.\n\n## Service\n- In the case where a Usenet download\u2019s name is its hash, while the filename is correct, the name will be renamed to the file name, bar any extensions. This will solve some issues with obfuscation.\n\n",
+    "link": "https://feedback.torbox.app/changelog/v713",
+    "created_at": "2025-03-28T02:13:40Z",
+    "id": "67e605d411f463f2a0afe977"
+   },
+   {
+    "name": "v7.1.2",
+    "html": "<h2>Web Downloads/Debrid</h2><ul><li><p>Adds support back for <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://terabytez.org/\">Terabytez</a> which was previously removed months ago due to the migration to the new system.</p></li><li><p>Adds ability to download from <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://hanime.tv/\">HAnime</a>. This is a popular hentai streaming platform which you can now download to TorBox. Simply take a the webpage link of the video you want downloaded and it will be added to your TorBox. <strong>There is no download status for this hoster.</strong></p></li><li><p>Adds support back for <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.hentai-foundry.com/\">HentaiFoundry</a> which was previously removed months ago due to the migration to the new system.</p></li><li><p>Adds support back for <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.4shared.com/\">4Shared</a> which was previously removed months ago due to the migration to the new system.</p></li><li><p>Adds support back for <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://hexload.com/\">HexUpload</a> which was previously removed months ago due to the migration to the new system.</p></li><li><p>Fixes<strong> </strong>Nexusmods downloader edgecase where some mods return file sizes of null from the API which prevents it from being downloaded.</p></li><li><p>Fixes Buzzheavier downloads as the website has changed.</p></li><li><p>Fixes edge case with Turbobit links including parameters which are not handled.</p></li><li><p>We are still slowly adding back the previously removed hosters and even more!</p></li></ul><h2>Service</h2><ul><li><p>Notification actions created from completed Usenet download now correctly sends you to the right download page.</p></li></ul><p></p>",
+    "markdown": "## Web Downloads/Debrid\n- Adds support back for [Terabytez](https://terabytez.org/) which was previously removed months ago due to the migration to the new system.\n- Adds ability to download from [HAnime](https://hanime.tv/). This is a popular hentai streaming platform which you can now download to TorBox. Simply take a the webpage link of the video you want downloaded and it will be added to your TorBox. **There is no download status for this hoster.**\n- Adds support back for [HentaiFoundry](https://www.hentai-foundry.com/) which was previously removed months ago due to the migration to the new system.\n- Adds support back for [4Shared](https://www.4shared.com/) which was previously removed months ago due to the migration to the new system.\n- Adds support back for [HexUpload](https://hexload.com/) which was previously removed months ago due to the migration to the new system.\n- Fixes** **Nexusmods downloader edgecase where some mods return file sizes of null from the API which prevents it from being downloaded.\n- Fixes Buzzheavier downloads as the website has changed.\n- Fixes edge case with Turbobit links including parameters which are not handled.\n- We are still slowly adding back the previously removed hosters and even more!\n\n## Service\n- Notification actions created from completed Usenet download now correctly sends you to the right download page.\n\n",
+    "link": "https://feedback.torbox.app/changelog/v712",
+    "created_at": "2025-03-25T02:37:42Z",
+    "id": "67e216f610cfd8a5d7d60ad6"
+   },
+   {
+    "name": "v7.1.1",
+    "html": "<h2>Search API</h2><ul><li><p>Better handling of Prowlarr magnets and torrent files.</p></li><li><p>Prowlarr search engines now show \u201cuser_search\u201d as true. This is useful for the Stremio addon to properly display.</p></li></ul><h2>Web Downloads/Debrid</h2><ul><li><p>Added dedicated Dropbox downloader as the previous one could only handle media files such as video and audio. This one can handle all file types.</p></li><li><p>Added support for APKAdmin hoster. Simply submit the download page of the file you want to download and it will download it, bypassing any ads, popups, or wait times!</p></li><li><p>Added support for Nexusmods hoster. Simply submit the mod or collection you want downloaded and it will download at max speed (no waiting times or slow downs or limit to concurrent downloads)!</p></li></ul><h2>WebDAV</h2><ul><li><p>Deleting a WebDAV folder will delete it from your TorBox account. This is useful for users, tools or automations which want to control downloads from the WebDAV! (<em>FTP parity coming soon).</em></p></li></ul><h2>Stremio Addon</h2><ul><li><p>Handles edge-case where links would not get encoded properly and be routed elsewhere. This only happened with select links from Prowlarr user search engines.</p></li></ul><p></p>",
+    "markdown": "## Search API\n- Better handling of Prowlarr magnets and torrent files.\n- Prowlarr search engines now show \u201cuser\\_search\u201d as true. This is useful for the Stremio addon to properly display.\n\n## Web Downloads/Debrid\n- Added dedicated Dropbox downloader as the previous one could only handle media files such as video and audio. This one can handle all file types.\n- Added support for APKAdmin hoster. Simply submit the download page of the file you want to download and it will download it, bypassing any ads, popups, or wait times!\n- Added support for Nexusmods hoster. Simply submit the mod or collection you want downloaded and it will download at max speed (no waiting times or slow downs or limit to concurrent downloads)!\n\n## WebDAV\n- Deleting a WebDAV folder will delete it from your TorBox account. This is useful for users, tools or automations which want to control downloads from the WebDAV! (*FTP parity coming soon).*\n\n## Stremio Addon\n- Handles edge-case where links would not get encoded properly and be routed elsewhere. This only happened with select links from Prowlarr user search engines.\n\n",
+    "link": "https://feedback.torbox.app/changelog/v711",
+    "created_at": "2025-03-21T03:52:40Z",
+    "id": "67dce2888010f858368edb44"
+   },
+   {
+    "name": "v7.1",
+    "html": "<h2>Website</h2><ul><li><p>Fixes settings page to disallow the following while it is still loading data:</p><ul><li><p>Copying API key</p></li><li><p>Getting a new API key</p></li><li><p>Viewing subscriptions (will not show placeholder)</p></li><li><p>Viewing time left on account (will not show placeholder)</p></li></ul></li><li><p>Stremio settings do not allow for setting bad changes.</p><ul><li><p>Cache settings must have an option selected.</p></li><li><p>Quality, Resolution and Language must include the \u201cUnknown\u201d option.</p></li><li><p>The \u201cOnly show streams larger than size (GB)\u201d setting must be less than the \u201cOnly show streams smaller than size (GB)\u201d limit.</p></li><li><p>The \u201cOnly show streams smaller than size (GB)\u201d setting must be at least 1, and more than the \u201cOnly show streams larger than size (GB)\u201d</p></li></ul></li><li><p>New popup with discount for Free users to upgrade to a yearly plan on new torrent being added.</p></li><li><p>Fixes RSS page live data from causing the page to error out if a request fails.</p></li><li><p>Removes Sellix CDN script from site.</p></li><li><p>Free users now use session tokens for authentication with the API rather than API keys as they are no longer able to access the API.</p></li><li><p>Adds new $1 Pro Trial button to dashboard for Free and never before subscribed users. This allows you to use Pro in full for 24 hours for only $1!</p></li><li><p>Adds <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://checker.openwebtorrent.com/\">WebTorrent checker</a> to <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://torbox.app/tools\">tools page</a> as a direct link so users can quickly verify how many seeders and peers their torrent has. We will eventually be building this directly into the browser in the tools page.</p></li><li><p>Notifications can now have actions!</p><ul><li><p>Actions are buttons that do an action corresponding to what the notification is about. For example, if there was an error and you need to contact support to get it resolved, the action button will open the support modal to easily contact support. If a torrent finished downloading, it will give you a direct link to the download page of the files.</p></li><li><p>This feature is extremely powerful, and we will be adding more actions corresponding with notifications in the future.</p></li></ul></li><li><p>Cloud transfers, such as to Google Drive, OneDrive, 1Fichier, and GoFile can be cancelled in the middle of the transfer. This allows you to stop transferring at any point in the process and it won\u2019t be uploaded to the cloud.</p></li></ul><h2>Stremio Addon</h2><ul><li><p>New background for metadata that cannot be found on the Your Media section. Not a lot of people will see the new background but it is awesome. You can find the image <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://stremio.torbox.app/background/fancy\">here</a>. Put this as your wallpaper!</p></li><li><p>Stream lists now show the tracker the search result was from. This is useful for determining what tracker or indexer it was from so you can make better decisions for choosing streams.</p></li><li><p>Stream lists now show if the file was from a user search engine or not. It will look like<br><code>TorBox (User Search) (Instant) (1080p)</code> for a 1080p cached result from the user\u2019s search engine. Pair this with the above tracker viewer, and you know exactly where a stream is from!</p></li><li><p>A new error video plays when you are out of slots. This can happen periodically and to the average user it looks like there was a bug in TorBox, when really, their account is out of slots to download the torrent in the first place.</p></li></ul><h2>Web Downloads/Debrid</h2><ul><li><p>Allows downloading direct Buzzheavier links such as in the format <code>https://buzzheavier.com/dl/XXXXXX</code></p></li><li><p>Fixes downloading from <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Archive.org\">Archive.org</a>. Some links weren\u2019t shaped properly when copied from the <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Archive.org\">Archive.org</a> site.</p></li><li><p>Downloads from <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Archive.org\">Archive.org</a> now show download progress. Previously it would look stuck as we didn\u2019t have reliable status updates.</p></li><li><p>Baidu downloads have been made more reliable. Links were getting stuck in storage filling it up, which no longer occurs.</p></li><li><p>Fixes MegaUp downloads.</p></li><li><p>Fixes Mediafire downloads.</p></li><li><p>Fixes 1Fichier downloads with bad characters in the name (Non-UTF8).</p></li></ul><h2>API</h2><ul><li><p>Cancelling in progress transfer jobs is possible now through the API. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://go.postman.co/wamy-dev/workspace/torbox/documentation/29572726-4244cdaf-ece6-4b6d-a2ca-463a3af48f54?entity=request-50d0f0fa-f189-4883-9068-42a6937b59c6\">API DOCS</a>.</p></li><li><p>Submitting names to the API are now properly handled when creating Usenet and Web Downloads.</p></li><li><p>Webhooks sent from the API to user\u2019s configured webhook URL now use the title as the webhook type, such as \u201cDownload Ready\u201d to \u201cdownload.ready\u201d for handling properly in webhooks. This will be documented soon.</p></li><li><p>Proper API messages when a free user submits their API key to the API.</p></li></ul><h2>Service</h2><ul><li><p>Fixes some RSS feed links which download a .rss file, or a .xml file rather than returning the RSS feed data directly as content.</p></li><li><p>Subscriptions with Patreon now fixed.</p></li><li><p>Usenet files are now normalized to allow for usenet files to be properly cached. When an NZB is added from the same tracker, and is the same file, even from different accounts, it will be cached if actually cached.</p></li><li><p>Cloud transfers now are more reliable due to using CDN rather than \u201clocal storage\u201d files, which can be slow, or have other issues.</p></li><li><p>More reliable processing.</p></li><li><p>Fixes torrent ownership. If, for example, 2 users add the same torrent at the same time, one of the users will be the owner of the torrent, rather than duplicates being created. This lead to problems with the database and qBittorrent not being synced, especially with private torrents, where it is far more important.</p></li><li><p>Cloud transfers should start sooner (instantly), rather than taking minutes or even hours to start due to sharing a queue with other high traffic queues, which could get stuck in the back for a long time.</p></li><li><p>Torrent updates should be more full on the dashboard with no issues with malformed data.</p></li></ul><p></p>",
+    "markdown": "## Website\n- Fixes settings page to disallow the following while it is still loading data:\n    - Copying API key\n    - Getting a new API key\n    - Viewing subscriptions (will not show placeholder)\n    - Viewing time left on account (will not show placeholder)\n    \n- Stremio settings do not allow for setting bad changes.\n    - Cache settings must have an option selected.\n    - Quality, Resolution and Language must include the \u201cUnknown\u201d option.\n    - The \u201cOnly show streams larger than size (GB)\u201d setting must be less than the \u201cOnly show streams smaller than size (GB)\u201d limit.\n    - The \u201cOnly show streams smaller than size (GB)\u201d setting must be at least 1, and more than the \u201cOnly show streams larger than size (GB)\u201d\n    \n- New popup with discount for Free users to upgrade to a yearly plan on new torrent being added.\n- Fixes RSS page live data from causing the page to error out if a request fails.\n- Removes Sellix CDN script from site.\n- Free users now use session tokens for authentication with the API rather than API keys as they are no longer able to access the API.\n- Adds new $1 Pro Trial button to dashboard for Free and never before subscribed users. This allows you to use Pro in full for 24 hours for only $1!\n- Adds [WebTorrent checker](https://checker.openwebtorrent.com/) to [tools page](https://torbox.app/tools) as a direct link so users can quickly verify how many seeders and peers their torrent has. We will eventually be building this directly into the browser in the tools page.\n- Notifications can now have actions!\n    - Actions are buttons that do an action corresponding to what the notification is about. For example, if there was an error and you need to contact support to get it resolved, the action button will open the support modal to easily contact support. If a torrent finished downloading, it will give you a direct link to the download page of the files.\n    - This feature is extremely powerful, and we will be adding more actions corresponding with notifications in the future.\n    \n- Cloud transfers, such as to Google Drive, OneDrive, 1Fichier, and GoFile can be cancelled in the middle of the transfer. This allows you to stop transferring at any point in the process and it won\u2019t be uploaded to the cloud.\n\n## Stremio Addon\n- New background for metadata that cannot be found on the Your Media section. Not a lot of people will see the new background but it is awesome. You can find the image [here](https://stremio.torbox.app/background/fancy). Put this as your wallpaper!\n- Stream lists now show the tracker the search result was from. This is useful for determining what tracker or indexer it was from so you can make better decisions for choosing streams.\n- Stream lists now show if the file was from a user search engine or not. It will look like\n    `TorBox (User Search) (Instant) (1080p)` for a 1080p cached result from the user\u2019s search engine. Pair this with the above tracker viewer, and you know exactly where a stream is from!\n- A new error video plays when you are out of slots. This can happen periodically and to the average user it looks like there was a bug in TorBox, when really, their account is out of slots to download the torrent in the first place.\n\n## Web Downloads/Debrid\n- Allows downloading direct Buzzheavier links such as in the format `https://buzzheavier.com/dl/XXXXXX`\n- Fixes downloading from [Archive.org](http://Archive.org). Some links weren\u2019t shaped properly when copied from the [Archive.org](http://Archive.org) site.\n- Downloads from [Archive.org](http://Archive.org) now show download progress. Previously it would look stuck as we didn\u2019t have reliable status updates.\n- Baidu downloads have been made more reliable. Links were getting stuck in storage filling it up, which no longer occurs.\n- Fixes MegaUp downloads.\n- Fixes Mediafire downloads.\n- Fixes 1Fichier downloads with bad characters in the name (Non-UTF8).\n\n## API\n- Cancelling in progress transfer jobs is possible now through the API. [API DOCS](https://go.postman.co/wamy-dev/workspace/torbox/documentation/29572726-4244cdaf-ece6-4b6d-a2ca-463a3af48f54?entity=request-50d0f0fa-f189-4883-9068-42a6937b59c6).\n- Submitting names to the API are now properly handled when creating Usenet and Web Downloads.\n- Webhooks sent from the API to user\u2019s configured webhook URL now use the title as the webhook type, such as \u201cDownload Ready\u201d to \u201cdownload.ready\u201d for handling properly in webhooks. This will be documented soon.\n- Proper API messages when a free user submits their API key to the API.\n\n## Service\n- Fixes some RSS feed links which download a .rss file, or a .xml file rather than returning the RSS feed data directly as content.\n- Subscriptions with Patreon now fixed.\n- Usenet files are now normalized to allow for usenet files to be properly cached. When an NZB is added from the same tracker, and is the same file, even from different accounts, it will be cached if actually cached.\n- Cloud transfers now are more reliable due to using CDN rather than \u201clocal storage\u201d files, which can be slow, or have other issues.\n- More reliable processing.\n- Fixes torrent ownership. If, for example, 2 users add the same torrent at the same time, one of the users will be the owner of the torrent, rather than duplicates being created. This lead to problems with the database and qBittorrent not being synced, especially with private torrents, where it is far more important.\n- Cloud transfers should start sooner (instantly), rather than taking minutes or even hours to start due to sharing a queue with other high traffic queues, which could get stuck in the back for a long time.\n- Torrent updates should be more full on the dashboard with no issues with malformed data.\n\n",
+    "link": "https://feedback.torbox.app/changelog/v71",
+    "created_at": "2025-03-18T17:00:00Z",
+    "id": "67ce9d6fcae9c8c113cc56a8"
+   },
+   {
+    "name": "v7.0",
+    "html": "<h2>Website</h2><ul><li><p>Added UI section labeled \u201cSearch\u201d in the settings. This is where you can access the new Bring Your Own Indexer (BYOI as the community has been calling it) settings. This allows you to add your own indexers or trackers using the NZBHydra2, Jackett or Prowlarr self-hosted apps.</p><ul><li><p>This allows you to get personalized torrents and Usenet results from your own trackers, removing reliance on TorBox\u2019s own search indexers and providers.</p></li><li><p>This also allows you to stream private torrents from apps like Stremio which use TorBox\u2019s search engine. This is a never before seen feature.</p></li><li><p>Like mentioned, it works with torrents and Usenet and adding new search engines is very easy.</p></li><li><p>It works using the API too, so you (and developers) don\u2019t have to do anything extra to use it with existing apps that already use the TorBox Voyager search engine.</p></li><li><p>Shows the available indexers that it will use.</p></li></ul></li><li><p>Added a manual switch in the Search settings for using the BYOI feature in Stremio, as not everyone may want it in Stremio, as it may create longer loading times. This is off by default.</p></li><li><p>Added a switch in the Stremio settings for using the legacy \u201cYour Media\u201d in the Stremio addon discover page. (More on this in the Stremio section).</p></li><li><p>Added a switch in the Stremio settings for sorting what type of streams are shown first. You can now choose whether you want Usenet or torrent results first in the list.</p></li><li><p>Added a switch in the Integration settings for WebDAV labeled, \u201cWebDAV Use Local Files\u201d. This allows you to use the CDN, or not when downloading from the WebDAV. Depending on how you use the WebDAV service, it may be necessary to enable this setting. More information can be found on the settings page.</p></li><li><p>Fixed mass deleting queued downloads in the settings page.</p></li><li><p>Adds back Crypto payments which are now being processed through <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://NowPayments.io\">NowPayments.io</a> due to <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Sellix.io\">Sellix.io</a> being taken down.</p></li><li><p>The dashboard now properly updates when you \u201cStop Seeding\u201d a torrent.</p></li><li><p>Added clarification about per link size limits on the <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://torbox.app/hosters\">Hosters page</a>.</p></li><li><p>Makes it easier to long tap on an item on the dashboard for iOS mobile devices which wanted to select text rather than hold on an item. It will now show the context menu more reliably.</p></li><li><p>All downloads now show a distinguished \u201cCached XXX ago\u201d and \u201cCreated XXX ago\u201d. This is to better tell how long ago an item was cached, while also not messing up the dashboard.</p></li></ul><h2>Stremio Addon</h2><ul><li><p>The Stremio addon can use the BYOI feature recently introduced. Make sure you enable it in the settings.</p></li><li><p>New \u201cYour Media\u201d section (discover page).</p><ul><li><p>This now shows posters relating to the media rather than basic TorBox posters with text.</p></li><li><p>Multiple media downloads which relate to the same media will be placed together in the Your Media section. When clicking on a Your Media item, it will now show the proper listing for content based on Season and Episode (if TV) or list the watchable files inside of the media download if a movie.</p></li><li><p>It now shows full metadata for download items including year, description and even rating.</p></li><li><p><strong><em>NOTE: THIS REQUIRES YOU TO RE-INSTALL YOUR TORBOX STREMIO ADDON TO WORK PROPERLY.</em></strong></p></li></ul></li><li><p>\u201cYour Media\u201d in the stream selection page is now more reliable and works even if the torrent/Usenet files are not named properly, it will still match in most cases.</p></li><li><p>You can now sort by torrent or Usenet in the streams selection page. This allows you to show either torrents or Usenet downloads first. This can be useful, especially for Pro users who only want to stream Usenet downloads.</p></li><li><p>The addon now uses CDN selection when streaming. Previously it only used the EU when streaming if on the default (Auto) setting. Setting manually used the CDN.</p></li><li><p>Better streaming performance, less buffering, and shorter start times for most users.</p></li><li><p>Play next episode now works properly in the addon allowing users to get the Stremio popup for getting the next episode, even inside of \u201cYour Media\u201d listings.</p></li><li><p>Usenet items now properly show as cached if another user has them cached.</p></li></ul><h2>WebDAV</h2><ul><li><p>Speed improvements regarding listing files. It no longer requires the filesystem to list files meaning it is very quick due to using the database only. Users with large libraries should no longer time out when viewing their files.</p></li><li><p>Allows using the CDN when downloading files. This increases reliability, and heavily increases download speed especially for users requiring a CDN to download quickly. This makes streaming over the WebDAV insanely quick now.</p><ul><li><p>Your may get 429 errors when downloading large folders. This is due to the connection limit and request speed when downloading many files at the same time from our CDN which is rate limited and connection limited. We recommend sticking to 1 connection in these cases.</p></li></ul></li></ul><h2>Search API</h2><ul><li><p>The search API now includes Torrentio when searching for torrents via ID. Torentio has many good sources and is very fast, so it is being used as a backup.</p></li><li><p>Parameter to enable user search engines when searching the API, <code>search_user_engines</code>. This will increase the amount of time taken (as you are waiting for responses from more places, and disable caching on any results. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/torbox/request/sgwtp70/get-torrent-data?tab=params\">API DOCS</a>.</p><ul><li><p>This uses the user\u2019s search engines which they have configured in their settings to search for the torrents/Usenet requests you specify. All work with ID or query.</p></li></ul></li><li><p>Minor speed optimizations when searching for torrents.</p></li></ul><h2>Web Downloads / Debrid</h2><ul><li><p>Fixes Mediafire downloader due to Cloudflare protections.</p></li><li><p>Fixes NHentai downloader due to Cloudflare protections.</p></li><li><p>Fixes Qiwi downloader due to Cloudflare protections.</p></li><li><p>Adds <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://bunkr.cr\">Bunkr</a> downloader. A popular filehoster primarily used for pornography. Known for having lots of ads on its pages, so using TorBox to reliably and safely download from Bunkr is great.</p></li><li><p>Adds <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://megaup.net\">MegaUp</a> downloader. A popular filehoster. Known for having lots of ads and malware on its pages, so using TorBox to reliably and safely download from MegaUp is great.</p></li><li><p>Adds Anna\u2019s Archive downloader. This is a popular library file hoster with the internet\u2019s largest collection of books freely available to download. TorBox downloads these files extremely fast, which is usually limited to donating users to the site.</p></li><li><p>Makes Baidu downloader more reliable.</p><ul><li><p>Baidu does not show download speeds or any download status.</p></li></ul></li><li><p>Makes DDownload downloader more reliable.</p></li><li><p>Fixes Datanodes downloader due to new changes.</p></li><li><p>Better status updates when something fails due to Cloudflare protections.</p></li><li><p>Overall better reliability of the web downloads system.</p></li><li><p>Fixes Filer downloader.</p></li><li><p>Fixes SpankBang downloader.</p></li><li><p>Fixes Coomer downloader.</p></li><li><p>Pixeldrain lists and directories can now be downloaded from and added to TorBox.</p></li><li><p>Adds many more supported hosters.</p></li></ul><p><em>NOTE: We are aware of </em><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://Mega.nz\"><em>Mega.nz</em></a><em> downloader issues. This has been disabled for time being. They now disallow pretty much all 3rd party apps from using their API, even their own CLI. We are working on a fix. Please bear with us. You can read more about this issue </em><a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://rclone.org/mega/#repeated-commands-blocks-access\"><em>here</em></a><em>, </em><a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.reddit.com/r/MEGA/comments/1hmefp9/unable_to_login_using_megacmd_hangs/\"><em>here</em></a><em> and </em><a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://forum.duplicati.com/t/402-payment-required-mega-nz/19808/7\"><em>here</em></a><em>.</em></p><h2>Service</h2><ul><li><p>Zip downloads now use the CDN making them extremely reliable and fast. Even large downloads with hundreds of files and folders will start downloading relatively quickly and at good speeds. It is CDN based, meaning you will download the zip from the closest server to you (or based off of your CDN settings) making zips very good rather than using the WebDAV or FTP.</p></li><li><p>We introduced our Beta <strong>US CDN</strong>. If this test goes good, we will continue expanding the US CDN with this server provider. All new downloads will go to the US CDN as well as the EU CDN as replication.</p></li><li><p>RSS Feeds now properly update based off of the time given.</p></li><li><p>Usenet and Web Downloads will now be queued if you are out of active slots to be downloaded later.</p></li><li><p>Notifications will now tell the reason why a Usenet download failed inside of the message.</p></li><li><p>Better payment errors.</p></li><li><p>Pro users are now able to add downloads up to <strong>1TB</strong> in size from the previous 500GB!</p></li><li><p>Download links are now valid for 3 hours before expiry rather than 1 hour.</p></li><li><p>Fixes some torrents still seeding when added through the Stremio addon if the user\u2019s option is set to \u201cNever\u201d.</p></li><li><p>Properly sends an email when the user\u2019s account is deleted to confirm deletion.</p></li><li><p>Cached web downloads will not show download progress.</p></li><li><p>Seeding torrents properly stop seeding at (or near) their specified seeding time.</p></li></ul><h2>API</h2><ul><li><p>The API now distinguishes a \u201ccached_at\u201d date and a \u201ccreated_at\u201d date. The \u201ccached_at\u201d date is to determine how long ago an item was cached, while \u201ccreated_at\u201d determines when a download was added to a user\u2019s account.</p></li></ul><h2>FTP</h2><ul><li><p>Fixes some filenames not showing properly and creating a recursive file structure due to not detecting it is a file/folder properly.</p></li></ul><p></p>",
+    "markdown": "## Website\n- Added UI section labeled \u201cSearch\u201d in the settings. This is where you can access the new Bring Your Own Indexer (BYOI as the community has been calling it) settings. This allows you to add your own indexers or trackers using the NZBHydra2, Jackett or Prowlarr self-hosted apps.\n    - This allows you to get personalized torrents and Usenet results from your own trackers, removing reliance on TorBox\u2019s own search indexers and providers.\n    - This also allows you to stream private torrents from apps like Stremio which use TorBox\u2019s search engine. This is a never before seen feature.\n    - Like mentioned, it works with torrents and Usenet and adding new search engines is very easy.\n    - It works using the API too, so you (and developers) don\u2019t have to do anything extra to use it with existing apps that already use the TorBox Voyager search engine.\n    - Shows the available indexers that it will use.\n    \n- Added a manual switch in the Search settings for using the BYOI feature in Stremio, as not everyone may want it in Stremio, as it may create longer loading times. This is off by default.\n- Added a switch in the Stremio settings for using the legacy \u201cYour Media\u201d in the Stremio addon discover page. (More on this in the Stremio section).\n- Added a switch in the Stremio settings for sorting what type of streams are shown first. You can now choose whether you want Usenet or torrent results first in the list.\n- Added a switch in the Integration settings for WebDAV labeled, \u201cWebDAV Use Local Files\u201d. This allows you to use the CDN, or not when downloading from the WebDAV. Depending on how you use the WebDAV service, it may be necessary to enable this setting. More information can be found on the settings page.\n- Fixed mass deleting queued downloads in the settings page.\n- Adds back Crypto payments which are now being processed through [NowPayments.io](http://NowPayments.io) due to [Sellix.io](http://Sellix.io) being taken down.\n- The dashboard now properly updates when you \u201cStop Seeding\u201d a torrent.\n- Added clarification about per link size limits on the [Hosters page](https://torbox.app/hosters).\n- Makes it easier to long tap on an item on the dashboard for iOS mobile devices which wanted to select text rather than hold on an item. It will now show the context menu more reliably.\n- All downloads now show a distinguished \u201cCached XXX ago\u201d and \u201cCreated XXX ago\u201d. This is to better tell how long ago an item was cached, while also not messing up the dashboard.\n\n## Stremio Addon\n- The Stremio addon can use the BYOI feature recently introduced. Make sure you enable it in the settings.\n- New \u201cYour Media\u201d section (discover page).\n    - This now shows posters relating to the media rather than basic TorBox posters with text.\n    - Multiple media downloads which relate to the same media will be placed together in the Your Media section. When clicking on a Your Media item, it will now show the proper listing for content based on Season and Episode (if TV) or list the watchable files inside of the media download if a movie.\n    - It now shows full metadata for download items including year, description and even rating.\n    - ***NOTE: THIS REQUIRES YOU TO RE-INSTALL YOUR TORBOX STREMIO ADDON TO WORK PROPERLY.***\n    \n- \u201cYour Media\u201d in the stream selection page is now more reliable and works even if the torrent/Usenet files are not named properly, it will still match in most cases.\n- You can now sort by torrent or Usenet in the streams selection page. This allows you to show either torrents or Usenet downloads first. This can be useful, especially for Pro users who only want to stream Usenet downloads.\n- The addon now uses CDN selection when streaming. Previously it only used the EU when streaming if on the default (Auto) setting. Setting manually used the CDN.\n- Better streaming performance, less buffering, and shorter start times for most users.\n- Play next episode now works properly in the addon allowing users to get the Stremio popup for getting the next episode, even inside of \u201cYour Media\u201d listings.\n- Usenet items now properly show as cached if another user has them cached.\n\n## WebDAV\n- Speed improvements regarding listing files. It no longer requires the filesystem to list files meaning it is very quick due to using the database only. Users with large libraries should no longer time out when viewing their files.\n- Allows using the CDN when downloading files. This increases reliability, and heavily increases download speed especially for users requiring a CDN to download quickly. This makes streaming over the WebDAV insanely quick now.\n    - Your may get 429 errors when downloading large folders. This is due to the connection limit and request speed when downloading many files at the same time from our CDN which is rate limited and connection limited. We recommend sticking to 1 connection in these cases.\n    \n\n## Search API\n- The search API now includes Torrentio when searching for torrents via ID. Torentio has many good sources and is very fast, so it is being used as a backup.\n- Parameter to enable user search engines when searching the API, `search_user_engines`. This will increase the amount of time taken (as you are waiting for responses from more places, and disable caching on any results. [API DOCS](https://www.postman.com/wamy-dev/torbox/request/sgwtp70/get-torrent-data?tab=params).\n    - This uses the user\u2019s search engines which they have configured in their settings to search for the torrents/Usenet requests you specify. All work with ID or query.\n    \n- Minor speed optimizations when searching for torrents.\n\n## Web Downloads / Debrid\n- Fixes Mediafire downloader due to Cloudflare protections.\n- Fixes NHentai downloader due to Cloudflare protections.\n- Fixes Qiwi downloader due to Cloudflare protections.\n- Adds [Bunkr](https://bunkr.cr) downloader. A popular filehoster primarily used for pornography. Known for having lots of ads on its pages, so using TorBox to reliably and safely download from Bunkr is great.\n- Adds [MegaUp](https://megaup.net) downloader. A popular filehoster. Known for having lots of ads and malware on its pages, so using TorBox to reliably and safely download from MegaUp is great.\n- Adds Anna\u2019s Archive downloader. This is a popular library file hoster with the internet\u2019s largest collection of books freely available to download. TorBox downloads these files extremely fast, which is usually limited to donating users to the site.\n- Makes Baidu downloader more reliable.\n    - Baidu does not show download speeds or any download status.\n    \n- Makes DDownload downloader more reliable.\n- Fixes Datanodes downloader due to new changes.\n- Better status updates when something fails due to Cloudflare protections.\n- Overall better reliability of the web downloads system.\n- Fixes Filer downloader.\n- Fixes SpankBang downloader.\n- Fixes Coomer downloader.\n- Pixeldrain lists and directories can now be downloaded from and added to TorBox.\n- Adds many more supported hosters.\n\n*NOTE: We are aware of *[*Mega.nz*](http://Mega.nz)* downloader issues. This has been disabled for time being. They now disallow pretty much all 3rd party apps from using their API, even their own CLI. We are working on a fix. Please bear with us. You can read more about this issue *[*here*](https://rclone.org/mega/#repeated-commands-blocks-access)*, *[*here*](https://www.reddit.com/r/MEGA/comments/1hmefp9/unable_to_login_using_megacmd_hangs/)* and *[*here*](https://forum.duplicati.com/t/402-payment-required-mega-nz/19808/7)*.*\n## Service\n- Zip downloads now use the CDN making them extremely reliable and fast. Even large downloads with hundreds of files and folders will start downloading relatively quickly and at good speeds. It is CDN based, meaning you will download the zip from the closest server to you (or based off of your CDN settings) making zips very good rather than using the WebDAV or FTP.\n- We introduced our Beta **US CDN**. If this test goes good, we will continue expanding the US CDN with this server provider. All new downloads will go to the US CDN as well as the EU CDN as replication.\n- RSS Feeds now properly update based off of the time given.\n- Usenet and Web Downloads will now be queued if you are out of active slots to be downloaded later.\n- Notifications will now tell the reason why a Usenet download failed inside of the message.\n- Better payment errors.\n- Pro users are now able to add downloads up to **1TB** in size from the previous 500GB!\n- Download links are now valid for 3 hours before expiry rather than 1 hour.\n- Fixes some torrents still seeding when added through the Stremio addon if the user\u2019s option is set to \u201cNever\u201d.\n- Properly sends an email when the user\u2019s account is deleted to confirm deletion.\n- Cached web downloads will not show download progress.\n- Seeding torrents properly stop seeding at (or near) their specified seeding time.\n\n## API\n- The API now distinguishes a \u201ccached\\_at\u201d date and a \u201ccreated\\_at\u201d date. The \u201ccached\\_at\u201d date is to determine how long ago an item was cached, while \u201ccreated\\_at\u201d determines when a download was added to a user\u2019s account.\n\n## FTP\n- Fixes some filenames not showing properly and creating a recursive file structure due to not detecting it is a file/folder properly.\n\n",
+    "link": "https://feedback.torbox.app/changelog/v70",
+    "created_at": "2025-03-03T18:18:39Z",
+    "id": "67c5f27f4f58dc17612e4192"
+   },
+   {
+    "name": "v6.2",
+    "html": "<p>Since we re-did RSS feeds, we also had to redo queued downloads as those were also becoming a problem, especially with the increase in new queued downloads (over 1 million), and at the beginning I (Wamy) did not foresee millions of records in a single table, so there became many issues which sprung about due to not being optimized for said millions of records. Luckily the fixes were somewhat simple, and the new features easy to add.</p><h2>Website</h2><ul><li><p>Adds the ability for different types of queued downloads to show up. This includes Usenet and even web downloads being able to be queued. Previously these would simply error, now they can be queued and used just as before.</p></li></ul><h2>Service</h2><ul><li><p>Queued downloads will be added on time (every hour), as before they would get delayed by minutes, hours and even days, which is not a good experience, especially if you have open slots you want to use.</p></li></ul><h2>SDK</h2><ul><li><p>Updates all SDKs to the latest version to reflect changes in the API.</p><ul><li><p><a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://pypi.org/project/torbox-api/\">Python</a></p></li><li><p><a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.npmjs.com/package/@torbox/torbox-api\">Typescript/Javascript</a></p></li><li><p><a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://github.com/TorBox-App/torbox-sdk-go/releases/tag/v1.0.2\">Go</a></p></li></ul></li></ul><h2>API</h2><ul><li><p><strong>BREAKING CHANGE</strong>: Removes the queued downloads routes at <code>/torrents/controlqueued</code>, and <code>/torrents/getqueued</code>. This was due to queued items needing their own route, rather than only being limited to the torrents endpoint. The routes are practically the same with a little more options, so if you are using these endpoints (basically nobody), then you can simply change the route and it will be all good!</p></li><li><p>Introduces a new route, <code>/queued</code>, which is where queued endpoints will now live. This is to allow future expansion, and stop any possible confusion when wanting to use queued Usenet downloads or web downloads for example. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/folder/29572726-9822ca28-d124-4ebb-b09f-cd1098e5f38a?ctx=documentation\">API DOCS</a>.</p><ul><li><p>Docs for <code>/controlqueued</code> moved. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-097e3b5d-c34d-449a-b26b-603ed3e6f6fe?ctx=documentation\">API DOCS</a>.</p></li><li><p>Docs for <code>/getqueued</code> moved. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-2e9b7b90-5544-478d-8744-e04543f4f0b8?ctx=documentation\">API DOCS</a>.</p></li></ul></li><li><p>Adds the \u201cas_queued\u201d parameter when creating a Usenet download. This way you can keep it in your queued and the system will add it eventually (gets checked every hour). <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-daacc348-3e3c-476e-8362-f35124a8ca46?ctx=documentation\">API DOCS</a>.</p></li><li><p>Adds the \u201cas_queued\u201d parameter when creating a web download. This way you can queue up lots of limited hosters for example, and the system will add each one in time (gets checked every hour). <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-ffb01e39-ebdf-4983-9483-f1907a37a133?ctx=documentation\">API DOCS</a>.</p></li></ul><p></p>",
+    "markdown": "Since we re-did RSS feeds, we also had to redo queued downloads as those were also becoming a problem, especially with the increase in new queued downloads (over 1 million), and at the beginning I (Wamy) did not foresee millions of records in a single table, so there became many issues which sprung about due to not being optimized for said millions of records. Luckily the fixes were somewhat simple, and the new features easy to add.\n## Website\n- Adds the ability for different types of queued downloads to show up. This includes Usenet and even web downloads being able to be queued. Previously these would simply error, now they can be queued and used just as before.\n\n## Service\n- Queued downloads will be added on time (every hour), as before they would get delayed by minutes, hours and even days, which is not a good experience, especially if you have open slots you want to use.\n\n## SDK\n- Updates all SDKs to the latest version to reflect changes in the API.\n    - [Python](https://pypi.org/project/torbox-api/)\n    - [Typescript/Javascript](https://www.npmjs.com/package/@torbox/torbox-api)\n    - [Go](https://github.com/TorBox-App/torbox-sdk-go/releases/tag/v1.0.2)\n    \n\n## API\n- **BREAKING CHANGE**: Removes the queued downloads routes at `/torrents/controlqueued`, and `/torrents/getqueued`. This was due to queued items needing their own route, rather than only being limited to the torrents endpoint. The routes are practically the same with a little more options, so if you are using these endpoints (basically nobody), then you can simply change the route and it will be all good!\n- Introduces a new route, `/queued`, which is where queued endpoints will now live. This is to allow future expansion, and stop any possible confusion when wanting to use queued Usenet downloads or web downloads for example. [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/folder/29572726-9822ca28-d124-4ebb-b09f-cd1098e5f38a?ctx=documentation).\n    - Docs for `/controlqueued` moved. [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-097e3b5d-c34d-449a-b26b-603ed3e6f6fe?ctx=documentation).\n    - Docs for `/getqueued` moved. [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-2e9b7b90-5544-478d-8744-e04543f4f0b8?ctx=documentation).\n    \n- Adds the \u201cas\\_queued\u201d parameter when creating a Usenet download. This way you can keep it in your queued and the system will add it eventually (gets checked every hour). [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-daacc348-3e3c-476e-8362-f35124a8ca46?ctx=documentation).\n- Adds the \u201cas\\_queued\u201d parameter when creating a web download. This way you can queue up lots of limited hosters for example, and the system will add each one in time (gets checked every hour). [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-ffb01e39-ebdf-4983-9483-f1907a37a133?ctx=documentation).\n\n",
+    "link": "https://feedback.torbox.app/changelog/v62",
+    "created_at": "2025-01-29T01:53:23Z",
+    "id": "67998a137f291833e29a735a"
+   },
+   {
+    "name": "v6.1",
+    "html": "<p>The RSS update! This update is specific to the RSS feed system, which has been left untouched for quite some time now. We have been going through and listening to what our users have been wanting, and an improved RSS feed system has been something that has been desperately needed. In short, we added compatibility with Usenet and web download RSS feeds, better reliability, and more status views so you (and us) can see exactly what is wrong with your RSS feed should issues arise! Read the specific details below.</p><h2><strong>Website</strong></h2><ul><li><p>Adds new RSS feed UI, which allows you to view all of the RSS feed items associated with an RSS feed. This allows you to view what has been scraped, downloaded, or what has been errored out.</p><ul><li><p>You can also click on the name for each item and get the associated file from the RSS feed source.</p></li></ul></li><li><p>Adds RSS feed status UI, allowing you to see exactly what is happening with your RSS feed at that exact moment, as well as see any possible issues that TorBox has had while scraping or downloading your RSS feed.</p></li><li><p>The RSS feeds page has been updated and now shows a bunch of new information, and auto updates, and is highly responsive with changes.</p></li><li><p>You can now specify 2 new options when editing or adding a new RSS feed.</p><ul><li><p>You can now specify the RSS Feed Download Type being a torrent, usenet, or web download RSS feed. This allows you to choose how scraped items are added to your TorBox account based on the RSS feed.</p></li><li><p>If the RSS feed type is of torrent, you can specify seeding settings, which are the same as the standard torrent seeding settings. This allows you to choose, per RSS feed, if they seed or not. This can be helpful for adding a lot of items at a time to the cache, or if you are adding from a private tracker for example.</p></li></ul></li></ul><h2>Service</h2><ul><li><p>Completely rewritten RSS feeds with compatibility with Usenet, and even web downloads!</p><ul><li><p>This rewrite (should be taken lightly) adds a ton of new features and makes it easier to see what exactly is going on with your RSS feed.</p></li><li><p>This also makes it so that it actually scrapes on time, rather than being delayed for minutes or even hours at a time.</p></li><li><p>RSS feeds now allow you to view their associated items, meaning that you can easily view and possibly debug any issues with an RSS feed and its items. Every item comes with a status and a status message.</p></li></ul></li></ul><h2>API</h2><ul><li><p>New endpoints for retrieving RSS feeds and their associated items. This allows you to fully use and control RSS feeds now.</p><ul><li><p>Get RSS feeds allows you to get all of a user\u2019s RSS feeds associated with their account. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-1624cad4-28fd-4bb0-934d-2246d1810cbc?ctx=documentation\">API DOCS</a>.</p></li><li><p>Get RSS feed items allows you to get the latest 10,000 RSS items associated with an RSS feed. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-5e2946d4-bfc8-4d0c-94c1-399c35b7cefa?ctx=documentation\">API DOCS</a>.</p></li><li><p>Generally better docs for RSS feeds, as many of the docs were missing helpful information.</p></li></ul></li></ul><p></p>",
+    "markdown": "The RSS update! This update is specific to the RSS feed system, which has been left untouched for quite some time now. We have been going through and listening to what our users have been wanting, and an improved RSS feed system has been something that has been desperately needed. In short, we added compatibility with Usenet and web download RSS feeds, better reliability, and more status views so you (and us) can see exactly what is wrong with your RSS feed should issues arise! Read the specific details below.\n## **Website**\n- Adds new RSS feed UI, which allows you to view all of the RSS feed items associated with an RSS feed. This allows you to view what has been scraped, downloaded, or what has been errored out.\n    - You can also click on the name for each item and get the associated file from the RSS feed source.\n    \n- Adds RSS feed status UI, allowing you to see exactly what is happening with your RSS feed at that exact moment, as well as see any possible issues that TorBox has had while scraping or downloading your RSS feed.\n- The RSS feeds page has been updated and now shows a bunch of new information, and auto updates, and is highly responsive with changes.\n- You can now specify 2 new options when editing or adding a new RSS feed.\n    - You can now specify the RSS Feed Download Type being a torrent, usenet, or web download RSS feed. This allows you to choose how scraped items are added to your TorBox account based on the RSS feed.\n    - If the RSS feed type is of torrent, you can specify seeding settings, which are the same as the standard torrent seeding settings. This allows you to choose, per RSS feed, if they seed or not. This can be helpful for adding a lot of items at a time to the cache, or if you are adding from a private tracker for example.\n    \n\n## Service\n- Completely rewritten RSS feeds with compatibility with Usenet, and even web downloads!\n    - This rewrite (should be taken lightly) adds a ton of new features and makes it easier to see what exactly is going on with your RSS feed.\n    - This also makes it so that it actually scrapes on time, rather than being delayed for minutes or even hours at a time.\n    - RSS feeds now allow you to view their associated items, meaning that you can easily view and possibly debug any issues with an RSS feed and its items. Every item comes with a status and a status message.\n    \n\n## API\n- New endpoints for retrieving RSS feeds and their associated items. This allows you to fully use and control RSS feeds now.\n    - Get RSS feeds allows you to get all of a user\u2019s RSS feeds associated with their account. [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-1624cad4-28fd-4bb0-934d-2246d1810cbc?ctx=documentation).\n    - Get RSS feed items allows you to get the latest 10,000 RSS items associated with an RSS feed. [API DOCS](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-5e2946d4-bfc8-4d0c-94c1-399c35b7cefa?ctx=documentation).\n    - Generally better docs for RSS feeds, as many of the docs were missing helpful information.\n    \n\n",
+    "link": "https://feedback.torbox.app/changelog/v61",
+    "created_at": "2025-01-28T04:01:55Z",
+    "id": "679856b3a620d9232331ced8"
+   },
+   {
+    "name": "v6.0",
+    "html": "<p>Wow, writing this, I don\u2019t even know where to begin. Version 6 of TorBox has been something that we have been desperately needing, and with our recent explosion of users, something that has been even more necessary. Our last change log was v5.0, on November 10th, 2024, which as of posting this update has been over 3 months ago. So much has happened in the past few months. Just because no updates have been posted, doesn\u2019t mean we haven\u2019t been just twiddling our thumbs like some people think.</p><h2>Website</h2><ul><li><p>Adds searching to integrations page. This makes it much easier to find the integration(s) you are looking for!</p></li><li><p>Adds CDN selection settings in the settings page under Integration Settings.</p></li><li><p>Fixes Integration Settings tab on mobile displays being centered.</p></li><li><p>Adds confirmation when attempting to cancel a subscription.</p></li><li><p>Allows users to manage subscriptions by clicking \u201cManage Subscription\u201d, which takes you to the correct place to manage your subscription.</p></li><li><p>You can now view all of your previous TorBox transactions under the Account section of the settings page, labeled \u201cPast Transactions\u201d.</p></li><li><p>Hosters page for viewing the current status of our newly rewritten hosters system. This is dynamic and updates every 30 seconds, and always has the most current information.</p><ul><li><p>You can also search this page.</p></li></ul></li><li><p>The dashboard now updates properly and is much more responsive, including deletions, additions and <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://updates.to\">updates.</a></p></li></ul><h2>Relay</h2><ul><li><p>The relay was rewritten internally to better handle the load of thousands of torrents all getting updates at the same time.</p><ul><li><p>Previously the client (the website or other application) was responsible for requesting updates from the qBittorrent. Once you had thousands of requests going to only a few dozen nodes every single second, things got overloaded quickly, and as a result, it looked like downloads never started or were extremely slow, even if they were downloading lightning fast.</p></li><li><p>Instead we now have a dedicated process that uses what the qBittorrent webUI uses called Sync. It massively reduces the load on both the database and the servers themselves by only getting the updated data of the torrent, rather than the entire torrent object which was bandwidth and time costly.</p></li></ul></li></ul><h2>Telegram Bot</h2><ul><li><p>By sending <code>/subscribe</code> to the Telegram bot, you can now pay for a TorBox subscription using Telegram Stars as a payment method. Telegram Stars can be purchased directly from Telegram using a debit or credit card, Apple Pay or Google pay wherever you use the Telegram app. This allows users who may not be able to pay with standard methods, to be able to pay for and use a premium TorBox subscription.</p></li></ul><h2>Service</h2><ul><li><p>Allows privacy emails such as those from <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://duck.com\">duck.com</a> or <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"http://simplelogin.com\">simplelogin.com</a>. This was previously blocked due to an API change from our email checking provider.</p></li><li><p>The speed test servers have been re-enabled. These were disabled previously to prevent additional load on the servers.</p></li><li><p>Payments are now given 31 days, rather than 30 to account for all months. This was causing users who paid in December to have their accounts lapse.</p></li><li><p>Completely rewritten our Hosters system rather than using JDownloader2 internally. We love JDownloader2 and use it personally, but it has scale issues which required us to completely do a 180 turn and write an API from the ground up, which allows us so much flexibility, and keeps us from relying on a 3rd party to keep our services running.</p><ul><li><p>With this change we have already rolled out some of the most popular hosters available, as well as ones that have never before been seen on any debrid service!</p></li></ul></li><li><p>New servers and networking now makes seeding and downloading much better and faster due to changes in network allowing torrents to find peers much faster and more than previously.</p></li><li><p>Changes to our routing system and how CDN and files are found on our servers.</p><ul><li><p>This completely removes any issues with propagation across servers and waiting for files to be available on all servers. Instead the API will calculate and find the closest server to you (or your selected CDN) if it has the file. Otherwise it will just pick the only server with the file.</p></li><li><p>This also allows more direct connections as we send you to the exact server with the file, rather than possibly proxying the file across servers, introducing unreliability and slower speeds than what is technically possible.</p></li><li><p>This allows us more flexibility as well as helps in debugging, as every link is the same. If, for example, you run into slow speeds, you can simply send us the link and we know exactly what server is having the issues.</p></li></ul></li></ul><h2>API</h2><ul><li><p>A dynamic and updating debrid hoster list has been made public for apps use. <a target=\"\" rel=\"noopener noreferrer nofollow\" class=\"link\" href=\"https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-0a17f8b0-87a1-459c-b2d9-32d34b00c2ae?action=share&amp;source=copy-link&amp;creator=29572726&amp;ctx=documentation\">API DOCS.</a> This can be used for status pages and the like. One has already been implemented on our Discord server using this API. Thanks Midnight!</p></li><li><p>CDN selection from settings overrides all settings passed.</p></li><li><p>Download links are cached in memory for a short period of time after creation to reduce time of the request down about 80%! These savings are also passed onto everything that requests a download links from the API saving time for all requests after the first.</p></li></ul><h2>Stremio Addon</h2><ul><li><p>Thanks to one of our developers, Runage, discovered that Stremio creates a new request to the API everytime you seek or click the play button on a piece of media. Runage advised us to cache the download link inside of the Stremio addon, so that if a user seeks or resumes media, it can be extremely fast. We have implemented this, and seeking is now much faster!</p></li><li><p>We are in the process of completely rewriting our Stremio addon to be the fastest and most feature complete addon available!</p></li></ul><p></p>",
+    "markdown": "Wow, writing this, I don\u2019t even know where to begin. Version 6 of TorBox has been something that we have been desperately needing, and with our recent explosion of users, something that has been even more necessary. Our last change log was v5.0, on November 10th, 2024, which as of posting this update has been over 3 months ago. So much has happened in the past few months. Just because no updates have been posted, doesn\u2019t mean we haven\u2019t been just twiddling our thumbs like some people think.\n## Website\n- Adds searching to integrations page. This makes it much easier to find the integration(s) you are looking for!\n- Adds CDN selection settings in the settings page under Integration Settings.\n- Fixes Integration Settings tab on mobile displays being centered.\n- Adds confirmation when attempting to cancel a subscription.\n- Allows users to manage subscriptions by clicking \u201cManage Subscription\u201d, which takes you to the correct place to manage your subscription.\n- You can now view all of your previous TorBox transactions under the Account section of the settings page, labeled \u201cPast Transactions\u201d.\n- Hosters page for viewing the current status of our newly rewritten hosters system. This is dynamic and updates every 30 seconds, and always has the most current information.\n    - You can also search this page.\n    \n- The dashboard now updates properly and is much more responsive, including deletions, additions and [updates.](http://updates.to)\n\n## Relay\n- The relay was rewritten internally to better handle the load of thousands of torrents all getting updates at the same time.\n    - Previously the client (the website or other application) was responsible for requesting updates from the qBittorrent. Once you had thousands of requests going to only a few dozen nodes every single second, things got overloaded quickly, and as a result, it looked like downloads never started or were extremely slow, even if they were downloading lightning fast.\n    - Instead we now have a dedicated process that uses what the qBittorrent webUI uses called Sync. It massively reduces the load on both the database and the servers themselves by only getting the updated data of the torrent, rather than the entire torrent object which was bandwidth and time costly.\n    \n\n## Telegram Bot\n- By sending `/subscribe` to the Telegram bot, you can now pay for a TorBox subscription using Telegram Stars as a payment method. Telegram Stars can be purchased directly from Telegram using a debit or credit card, Apple Pay or Google pay wherever you use the Telegram app. This allows users who may not be able to pay with standard methods, to be able to pay for and use a premium TorBox subscription.\n\n## Service\n- Allows privacy emails such as those from [duck.com](http://duck.com) or [simplelogin.com](http://simplelogin.com). This was previously blocked due to an API change from our email checking provider.\n- The speed test servers have been re-enabled. These were disabled previously to prevent additional load on the servers.\n- Payments are now given 31 days, rather than 30 to account for all months. This was causing users who paid in December to have their accounts lapse.\n- Completely rewritten our Hosters system rather than using JDownloader2 internally. We love JDownloader2 and use it personally, but it has scale issues which required us to completely do a 180 turn and write an API from the ground up, which allows us so much flexibility, and keeps us from relying on a 3rd party to keep our services running.\n    - With this change we have already rolled out some of the most popular hosters available, as well as ones that have never before been seen on any debrid service!\n    \n- New servers and networking now makes seeding and downloading much better and faster due to changes in network allowing torrents to find peers much faster and more than previously.\n- Changes to our routing system and how CDN and files are found on our servers.\n    - This completely removes any issues with propagation across servers and waiting for files to be available on all servers. Instead the API will calculate and find the closest server to you (or your selected CDN) if it has the file. Otherwise it will just pick the only server with the file.\n    - This also allows more direct connections as we send you to the exact server with the file, rather than possibly proxying the file across servers, introducing unreliability and slower speeds than what is technically possible.\n    - This allows us more flexibility as well as helps in debugging, as every link is the same. If, for example, you run into slow speeds, you can simply send us the link and we know exactly what server is having the issues.\n    \n\n## API\n- A dynamic and updating debrid hoster list has been made public for apps use. [API DOCS.](https://www.postman.com/wamy-dev/workspace/torbox/request/29572726-0a17f8b0-87a1-459c-b2d9-32d34b00c2ae?action=share&source=copy-link&creator=29572726&ctx=documentation) This can be used for status pages and the like. One has already been implemented on our Discord server using this API. Thanks Midnight!\n- CDN selection from settings overrides all settings passed.\n- Download links are cached in memory for a short period of time after creation to reduce time of the request down about 80%! These savings are also passed onto everything that requests a download links from the API saving time for all requests after the first.\n\n## Stremio Addon\n- Thanks to one of our developers, Runage, discovered that Stremio creates a new request to the API everytime you seek or click the play button on a piece of media. Runage advised us to cache the download link inside of the Stremio addon, so that if a user seeks or resumes media, it can be extremely fast. We have implemented this, and seeking is now much faster!\n- We are in the process of completely rewriting our Stremio addon to be the fastest and most feature complete addon available!\n\n",
+    "link": "https://feedback.torbox.app/changelog/v60",
+    "created_at": "2024-12-18T04:35:34Z",
+    "id": "67625116efd6ea319ceb6fa8"
+   }
+  ]
+ },
+ "GET /v1/api/speedtest": {
+  "success": true,
+  "detail": "Successfully retrieved test files for speed test.",
+  "error": null,
+  "data": [
+   {
+    "region": "string",
+    "name": "string",
+    "domain": "https://XXX",
+    "path": "string",
+    "url": "https://XXX",
+    "closest": true,
+    "coordinates": {
+     "lat": 52.374,
+     "lng": 4.8897
+    }
+   }
+  ]
+ },
+ "GET /v1/api/notifications/mynotifications": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved your notifications.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2023-12-22T22:39:22.387095+00:00",
+    "title": "Test",
+    "message": "This is a test.",
+    "auth_id": "XXXXXXXXXXXXXXXXXXXXXXXX"
+   },
+   {
+    "id": 1,
+    "created_at": "2023-12-22T22:39:23.540178+00:00",
+    "title": "Test",
+    "message": "This is a test.",
+    "auth_id": "XXXXXXXXXXXXXXXXXXXXXXXX"
+   }
+  ]
+ },
+ "POST /v1/api/notifications/clear": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully cleared your notifications.",
+  "data": null
+ },
+ "POST /v1/api/notifications/clear/*": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully cleared your notification.",
+  "data": null
+ },
+ "POST /v1/api/notifications/test": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully sent your test notification.",
+  "data": null
+ },
+ "POST /v1/api/user/refreshtoken": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully refreshed your API key.",
+  "data": "string"
+ },
+ "GET /v1/api/user/me": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved your user information.",
+  "data": {
+   "id": 0,
+   "auth_id": "string",
+   "created_at": "2023-08-30T20:23:00Z",
+   "updated_at": "2026-03-09T00:22:40Z",
+   "plan": 0,
+   "total_downloaded": 0,
+   "customer": "string",
+   "is_subscribed": true,
+   "premium_expires_at": "2051-02-18T04:08:43Z",
+   "cooldown_until": "2026-03-10T00:22:40Z",
+   "email": "example@example.com",
+   "user_referral": "string",
+   "base_email": "example@example.com",
+   "total_bytes_downloaded": 0,
+   "total_bytes_uploaded": 0,
+   "torrents_downloaded": 0,
+   "web_downloads_downloaded": 0,
+   "usenet_downloads_downloaded": 0,
+   "additional_concurrent_slots": 0,
+   "long_term_seeding": false,
+   "long_term_storage": false,
+   "is_vendor": false,
+   "vendor_id": 0,
+   "purchases_referred": 0
+  }
+ },
+ "POST /v1/api/user/addreferral": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully added referral.",
+  "data": null
+ },
+ "GET /v1/api/user/getconfirmation": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully sent your confirmation code.",
+  "data": null
+ },
+ "GET /v1/api/user/auth/device/start": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully created your device code authorization.",
+  "data": {
+   "device_code": "string",
+   "interval": 0,
+   "expires_at": "2025-08-24T15:18:28Z",
+   "verification_url": "https://torbox.app/oauth/device?app=ThirdPartyApp",
+   "friendly_verification_url": "https://tor.box/link",
+   "code": "string"
+  }
+ },
+ "POST /v1/api/user/auth/device/token": {
+  "success": true,
+  "error": null,
+  "detail": "Token has been successfully redeemed. Save this token as it will be used for all future API requests for this device.",
+  "data": {
+   "access_token": "XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+   "token_type": "Bearer"
+  }
+ },
+ "GET /v1/api/user/referraldata": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved referral data.",
+  "data": {
+   "referred_accounts": 0,
+   "referral_code": "string",
+   "purchases_referred": 0
+  }
+ },
+ "GET /v1/api/user/subscriptions": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved subscriptions.",
+  "data": [
+   {
+    "created_at": "2025-03-14T08:08:42Z",
+    "updated_at": "2025-08-04T18:37:44Z",
+    "subscription_code": "string",
+    "email_token": "string",
+    "auth_id": "string",
+    "plan_code": "string",
+    "status": "string",
+    "gateway": "string",
+    "plan_name": "string"
+   }
+  ]
+ },
+ "GET /v1/api/user/transactions": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved transactions.",
+  "data": [
+   {
+    "at": "2023-09-01T02:05:28Z",
+    "type": "string",
+    "amount": 0,
+    "transaction_id": "string"
+   },
+   {
+    "at": "2023-09-01T02:06:28Z",
+    "type": "string",
+    "amount": 0,
+    "transaction_id": "string"
+   }
+  ]
+ },
+ "PUT /v1/api/user/settings/editsettings": {
+  "success": true,
+  "error": null,
+  "detail": "User settings updated successfully.",
+  "data": null
+ },
+ "GET /v1/api/user/stats": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved your statistics.",
+  "data": {
+   "general": {
+    "total_downloaded": 52387288994,
+    "total_uploaded": 7186249682,
+    "ratio": 0.13717544503635323,
+    "total_items_downloaded": 36
+   },
+   "bandwidth": [
+    {
+     "date": "2026-04-27T00:00:00Z",
+     "bytes_downloaded": 0
+    },
+    {
+     "date": "2026-05-04T00:00:00Z",
+     "bytes_downloaded": 0
+    },
+    {
+     "date": "2026-05-11T00:00:00Z",
+     "bytes_downloaded": 4324742435
+    },
+    {
+     "date": "2026-05-18T00:00:00Z",
+     "bytes_downloaded": 6115056841
+    }
+   ]
+  }
+ },
+ "POST /v1/api/rss/addrss": {
+  "success": true,
+  "error": null,
+  "detail": "RSS feed added successfully.",
+  "data": null
+ },
+ "POST /v1/api/rss/controlrss": {
+  "success": true,
+  "error": null,
+  "detail": "RSS Feed operationd successfully.",
+  "data": null
+ },
+ "POST /v1/api/rss/modifyrss": {
+  "success": true,
+  "error": null,
+  "detail": "RSS feed modified successfully.",
+  "data": null
+ },
+ "GET /v1/api/rss/getfeeds": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved RSS feeds.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2025-08-20T09:01:02.714060Z",
+    "last_checked": "2026-03-09T20:40:22.457984Z",
+    "auth_id": "string",
+    "name": "string",
+    "url": "https://xxxx",
+    "source": "https://xxxx",
+    "source_name": "string",
+    "do_regex": "string",
+    "dont_regex": "string",
+    "status": "string",
+    "scan_interval": 0,
+    "dont_older_than": 0,
+    "status_message": "string",
+    "type": "string",
+    "torrent_seeding": 3,
+    "state": "string"
+   }
+  ]
+ },
+ "GET /v1/api/rss/getfeeditems": {
+  "success": true,
+  "error": null,
+  "detail": "Successfully retrieved RSS feed items.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2026-03-10T02:30:13.149869Z",
+    "rss_name": "string",
+    "rss_url": "https://xxxx",
+    "ignored": false,
+    "downloaded": true,
+    "link": "https://xxxx",
+    "name": "string",
+    "status": "string",
+    "status_message": "string",
+    "seed_torrents": 0,
+    "type": "string"
+   }
+  ]
+ },
+ "GET /v1/api/integration/jobs": {
+  "success": true,
+  "error": null,
+  "detail": "Jobs retrieved successfully.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2024-06-13T07:51:12.40135+00:00",
+    "updated_at": "2024-06-13T07:51:22.21287+00:00",
+    "auth_id": "string",
+    "hash": "string",
+    "type": "string",
+    "integration": "string",
+    "file_id": 0,
+    "zip": false,
+    "progress": 1,
+    "detail": "string",
+    "download_url": "https://xxxx",
+    "status": "string",
+    "file_name": "string",
+    "task_id": "string"
+   }
+  ]
+ },
+ "GET /v1/api/integration/job/*": {
+  "success": true,
+  "error": null,
+  "detail": "Job status retrieved successfully.",
+  "data": {
+   "id": 0,
+   "created_at": "2024-06-13T07:51:12.40135+00:00",
+   "updated_at": "2024-06-13T07:51:22.21287+00:00",
+   "auth_id": "string",
+   "hash": "string",
+   "type": "torrent",
+   "integration": "string",
+   "file_id": 0,
+   "zip": false,
+   "progress": 1,
+   "detail": "string",
+   "download_url": "https://xxxx",
+   "status": "string",
+   "file_name": "string",
+   "job_id": "string"
+  }
+ },
+ "GET /v1/api/integration/jobs/*": {
+  "success": true,
+  "error": null,
+  "detail": "Jobs retrieved successfully.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2024-06-13T07:51:12.40135+00:00",
+    "updated_at": "2024-06-13T07:51:22.21287+00:00",
+    "auth_id": "string",
+    "hash": "string",
+    "type": "string",
+    "integration": "string",
+    "file_id": 0,
+    "zip": false,
+    "progress": 1,
+    "detail": "string",
+    "download_url": "https://xxxx",
+    "status": "string",
+    "file_name": "string",
+    "task_id": "string"
+   }
+  ]
+ },
+ "DELETE /v1/api/integration/job/*": {
+  "success": true,
+  "error": null,
+  "detail": "Job successfully cancelled.",
+  "data": null
+ },
+ "GET /v1/api/queued/getqueued": {
+  "success": true,
+  "error": null,
+  "detail": "Queued downloads list retrieved successfully.",
+  "data": [
+   {
+    "id": 0,
+    "created_at": "2026-03-10T00:10:13Z",
+    "magnet": "string",
+    "torrent_file": "string",
+    "hash": "string",
+    "name": "string",
+    "type": "torrent",
+    "name_override": "string",
+    "seed_torrent_override": 3
+   }
+  ]
+ },
+ "POST /v1/api/queued/controlqueued": {
+  "success": true,
+  "error": null,
+  "detail": "Queued download {data.operation}d successfully.",
+  "data": null
+ },
+ "GET /v1/api/stream/createstream": {
+  "success": true,
+  "error": null,
+  "detail": "Stream initialized successfully.",
+  "data": {
+   "id": 0,
+   "file_id": 0,
+   "auth_id": "string",
+   "name": "string",
+   "short_name": "string",
+   "s3_path": "string",
+   "size": 0,
+   "mimetype": "string",
+   "hash": "string",
+   "open_subtitles_hash": "string",
+   "type": "torrent",
+   "region": "wnam",
+   "domain": "https://xxxx",
+   "user_token": "string",
+   "webdav_url": "https://xxxx",
+   "intro_information": {
+    "start_time": 0,
+    "end_time": 0,
+    "title": "string"
+   },
+   "scrobbling_enabled": true,
+   "hls_url": "https://xxxx",
+   "presigned_token": "string",
+   "subtitle_index": 0,
+   "audio_index": 0,
+   "resolution_index": 0,
+   "is_transcoding": false,
+   "needs_transcoding": true,
+   "metadata": {
+    "video": {
+     "index": 0,
+     "codec_type": "video",
+     "codec": "string",
+     "width": 0,
+     "height": 0,
+     "frame_rate": "0",
+     "pixel_format": "string",
+     "bitrate": "string",
+     "duration": "string",
+     "total_chunks": 0,
+     "file_name": "string",
+     "opensubtitles_hash": "string",
+     "size": 0,
+     "title": "string",
+     "title_data": {}
+    },
+    "audios": [
+     {
+      "index": 1,
+      "codec_type": "audio",
+      "codec": "string",
+      "default": true,
+      "sample_rate": "string",
+      "channels": 0,
+      "channel_layout": "string",
+      "language": "string",
+      "language_full": "string",
+      "title": "string"
+     }
+    ],
+    "subtitles": [],
+    "thumbnail": "thumbnail.png",
+    "chapters": "chapters.vtt"
+   },
+   "search_metadata": {
+    "title": "string",
+    "titles": [
+     "string",
+     "string"
+    ],
+    "keywords": [
+     "string",
+     "string"
+    ],
+    "genres": [
+     "string",
+     "string"
+    ],
+    "actors": [
+     "string",
+     "string"
+    ],
+    "releaseYears": "20XX-20XX",
+    "mediaType": "string",
+    "characters": [
+     "string",
+     "string"
+    ],
+    "globalID": "string",
+    "id": "string",
+    "link": "https://xxxx",
+    "description": "string",
+    "rating": 0,
+    "languages": [
+     "string",
+     "string"
+    ],
+    "contentRating": "string",
+    "trailer": {},
+    "image": "https://xxxx",
+    "isAdult": false,
+    "type": "string",
+    "releasedDate": "2000-01-27T00:00:00.000Z",
+    "episodesNumber": 0,
+    "runtime": "string",
+    "titles_full": [
+     {
+      "language": "string",
+      "title": "string"
+     }
+    ],
+    "backdrop": "https://xxxx"
+   }
+  }
+ },
+ "GET /v1/api/stream/getstreamdata": {
+  "success": true,
+  "error": null,
+  "detail": "Stream initialized successfully.",
+  "data": {
+   "hls_url": "https://xxxx",
+   "domain": "https://xxxx",
+   "presigned_token": "string",
+   "subtitle_index": 0,
+   "audio_index": 0,
+   "resolution_index": 0,
+   "file_token": "string",
+   "token": "string",
+   "is_transcoding": false,
+   "needs_transcoding": true,
+   "metadata": {
+    "video": {
+     "index": 0,
+     "codec_type": "video",
+     "codec": "string",
+     "width": 0,
+     "height": 0,
+     "frame_rate": "0",
+     "pixel_format": "string",
+     "bitrate": "string",
+     "duration": "string",
+     "total_chunks": 0,
+     "file_name": "string",
+     "opensubtitles_hash": "string",
+     "size": 0,
+     "title": "string",
+     "title_data": {}
+    },
+    "audios": [
+     {
+      "index": 1,
+      "codec_type": "audio",
+      "codec": "string",
+      "default": true,
+      "sample_rate": "string",
+      "channels": 0,
+      "channel_layout": "string",
+      "language": "string",
+      "language_full": "string",
+      "title": "string"
+     }
+    ],
+    "subtitles": [],
+    "thumbnail": "thumbnail.png",
+    "chapters": "chapters.vtt"
+   },
+   "search_metadata": {
+    "title": "string",
+    "titles": [
+     "string",
+     "string"
+    ],
+    "keywords": [
+     "string",
+     "string"
+    ],
+    "genres": [
+     "string",
+     "string"
+    ],
+    "actors": [
+     "string",
+     "string"
+    ],
+    "releaseYears": "20XX-20XX",
+    "mediaType": "string",
+    "characters": [
+     "string",
+     "string"
+    ],
+    "globalID": "string",
+    "id": "string",
+    "link": "https://xxxx",
+    "description": "string",
+    "rating": 0,
+    "languages": [
+     "string",
+     "string"
+    ],
+    "contentRating": "string",
+    "trailer": {},
+    "image": "https://xxxx",
+    "isAdult": false,
+    "type": "string",
+    "releasedDate": "2000-01-27T00:00:00.000Z",
+    "episodesNumber": 0,
+    "runtime": "string",
+    "titles_full": [
+     {
+      "language": "string",
+      "title": "string"
+     }
+    ],
+    "backdrop": "https://xxxx"
+   }
+  }
+ }
+}
